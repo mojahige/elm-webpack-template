@@ -1,5 +1,5 @@
-const path = require("path");
-const HTMLPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HTMLPlugin = require('html-webpack-plugin');
 
 module.exports = (env, argv) => {
   return {
@@ -9,20 +9,20 @@ module.exports = (env, argv) => {
           test: /\.elm$/,
           exclude: [/elm-stuff/, /node_modules/],
           use: {
-            loader: "elm-webpack-loader",
+            loader: 'elm-webpack-loader',
             options: {
-              debug: argv.mode === "development" ? true : false,
+              debug: argv.mode === 'development' ? true : false,
             },
           },
         },
       ],
     },
     resolve: {
-      extensions: [".js", ".elm", ".json", ".mjs", ".wasm"],
+      extensions: ['.js', '.elm', '.json', '.mjs', '.wasm'],
     },
     plugins: [
       new HTMLPlugin({
-        template: path.join(__dirname, "src/index.html"),
+        template: path.join(__dirname, 'src/index.html'),
       }),
     ],
   };
