@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "elm-webpack-template",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server"
+  },
+  "author": "mojahige (Yu Nozato)",
+  "devDependencies": {
+    "elm-webpack-loader": "^7.0.1",
+    "html-webpack-plugin": "^4.4.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
